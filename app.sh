@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/sh
 echo "Hello from Jenkins CI/CD Pipeline"
