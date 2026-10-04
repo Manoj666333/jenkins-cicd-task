@@ -1,4 +1,3 @@
-cat > Jenkinsfile <<'EOF'
 pipeline {
     agent any
 
@@ -6,11 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building application...'
+                sh 'chmod +x app.sh'
             }
         }
 
         stage('Test') {
             steps {
+                echo 'Testing application...'
                 sh './app.sh'
             }
         }
@@ -22,4 +23,3 @@ pipeline {
         }
     }
 }
-EOF
